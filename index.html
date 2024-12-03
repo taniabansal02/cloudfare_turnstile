@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turnstile Widget</title>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+  <div
+    class="cf-turnstile"
+    data-sitekey="0x4AAAAAAA1ZGyWAVR6DIDdf"
+    data-callback="onSuccess"
+    data-theme="light"
+  ></div>
+  <script>
+    function onSuccess(token) {
+      window.ReactNativeWebView.postMessage(token);
+    }
+  </script>
+</body>
+</html>
